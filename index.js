@@ -15,9 +15,6 @@ app.use(express.json());
 app.use("/api",require('./Routes/createUser'));
 app.use("/api",require('./Routes/displayData'));
 app.use("/api",require('./Routes/OrderData'));
-app.get("/",(req,res)=>{
-    res.send("<h1>Hello world</h1>")
-})
 
 app.use(express.static(path.join(__dirname,"../build")));
 app.get("*",(req,res)=>{
